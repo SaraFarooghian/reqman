@@ -44,6 +44,12 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
       
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#4caf50">
       
     
     
@@ -65,7 +71,9 @@
     
   </head>
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="green" data-md-color-accent="green">
   
     <svg class="md-svg">
       <defs>
@@ -255,15 +263,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#on-nix-platforms" class="md-nav__link">
-    On nix platforms
+  <a href="#on-windows" class="md-nav__link">
+    On Windows
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#on-windows" class="md-nav__link">
-    On Windows
+  <a href="#on-nix-platforms" class="md-nav__link">
+    On *nix platforms
   </a>
   
 </li>
@@ -379,15 +387,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#on-nix-platforms" class="md-nav__link">
-    On nix platforms
+  <a href="#on-windows" class="md-nav__link">
+    On Windows
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#on-windows" class="md-nav__link">
-    On Windows
+  <a href="#on-nix-platforms" class="md-nav__link">
+    On *nix platforms
   </a>
   
 </li>
@@ -417,19 +425,20 @@
                 
                 
                 <h1 id="install">Install</h1>
-<h2 id="on-nix-platforms">On nix platforms</h2>
+<h2 id="on-windows">On Windows</h2>
+<p>Download <a href="https://github.com/manatlan/reqman/blob/master/dist/reqman.exe">reqman.exe</a></p>
+<h2 id="on-nix-platforms">On *nix platforms</h2>
 <p>In a console:</p>
 <div class="codehilite"><pre><span></span>$ pip3 install reqman
 </pre></div>
 
 
-<p>(should install <a href="https://pypi.org/project/PyYAML/">PyYAML</a>, <a href="https://pypi.org/project/httpcore/">httpcore</a> &amp; <a href="https://pypi.org/project/stpl/">stpl</a> dependencies)</p>
-<h2 id="on-windows">On Windows</h2>
-<p>Download <a href="https://github.com/manatlan/reqman/blob/master/dist/reqman.exe">reqman.exe</a></p>
+<p>(Will install <a href="https://pypi.org/project/PyYAML/">PyYAML</a>, <a href="https://pypi.org/project/httpcore/">httpcore</a>, <a href="https://pypi.org/project/stpl/">stpl</a> and <a href="https://pypi.org/project/colorama/">colorama</a> dependencies)</p>
 <h2 id="from-sources">From Sources</h2>
 <p>In a console:</p>
 <div class="codehilite"><pre><span></span>$ git clone https://github.com/manatlan/reqman.git
 $ pip3 install pyyaml httpcore stpl colorama
+$ python3 -m pytest tests/
 </pre></div>
                 
                   

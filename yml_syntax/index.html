@@ -44,6 +44,12 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
       
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#4caf50">
       
     
     
@@ -65,7 +71,9 @@
     
   </head>
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="green" data-md-color-accent="green">
   
     <svg class="md-svg">
       <defs>
@@ -633,7 +641,7 @@
 </pre></div>
 
 
-<p>And it's generally completed with additionnal keywords</p>
+<p>And it's generally completed with <a href="./#additionnal-keywords">additionnal keywords</a></p>
 <h3 id="a-procedures-declaration">A Procedure's declaration</h3>
 <p>This statement declare a procedure which can be only called by a "call statement".</p>
 <p>Here is the declaration of a procedure <code>MyProcedure</code>:</p>
@@ -658,7 +666,7 @@
 </pre></div>
 
 
-<p>And it's generally completed with additionnal keywords</p>
+<p>And it's generally completed with <a href="./#additionnal-keywords">additionnal keywords</a></p>
 <h3 id="a-break-statement">A 'break' statement</h3>
 <p>This statement is only useful, when you are working on a test file, it lets you break the process. So you can edit your statements step by step.</p>
 <div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">GET</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/hello1</span>
@@ -690,6 +698,7 @@
 </pre></div>
 
 
+<p>Body described in yaml syntax, will automatically converted in json. The latest 2 examples are the same.</p>
 <h3 id="headers">"headers"</h3>
 <p>Let you add 'headers' in yours statements. </p>
 <div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">POST</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/hello</span>
@@ -700,28 +709,47 @@
 </pre></div>
 
 
+<p>If there are global or inherited headers, you can override them, by setting them to <code>null</code>, like that:</p>
+<div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">myproc</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">POST</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/hello</span>
+      <span class="nt">body</span><span class="p">:</span> <span class="s">&quot;I&#39;m</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">body&quot;</span>
+      <span class="nt">headers</span><span class="p">:</span>
+        <span class="nt">content-type</span><span class="p">:</span>       <span class="c1"># leave empty, will not send the content-type from the caller</span>
+        <span class="nt">x-hello</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">it&#39;s me</span>
+
+<span class="p p-Indicator">-</span> <span class="nt">call</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">myproc</span>
+  <span class="nt">headers</span><span class="p">:</span>
+     <span class="nt">content-type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">application/json</span>
+</pre></div>
+
+
+<p>Header's keys are case insensitive.</p>
 <h3 id="tests">"tests"</h3>
 <p>Let you add 'tests' in yours statements. </p>
-<div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">GET</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/returnJson</span>  <span class="c1"># return {&quot;result&quot;:{&quot;content&quot;:&quot;ok&quot;,&quot;value&quot;:3.3}}</span>
+<div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">GET</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/returnJson</span>  <span class="c1"># return {&quot;result&quot;:{&quot;content&quot;:&quot;ok&quot;,&quot;value&quot;:3.3, &quot;list&quot;:[42,43]}}</span>
   <span class="nt">tests</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">status</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">200</span>
     <span class="p p-Indicator">-</span> <span class="nt">content-type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">application/json</span>    <span class="c1"># test a response header</span>
+    <span class="p p-Indicator">-</span> <span class="nt">content</span><span class="p">:</span>  <span class="s">&quot;result&quot;</span>                <span class="c1"># ensure that the global response contains text &quot;result&quot;</span>
     <span class="p p-Indicator">-</span> <span class="nt">json.result.content</span><span class="p">:</span> <span class="s">&quot;ok&quot;</span>
     <span class="p p-Indicator">-</span> <span class="nt">json.result.content</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">. != &quot;ko&quot;</span>
     <span class="p p-Indicator">-</span> <span class="nt">json.result.content.size</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>       <span class="c1"># test size of the string</span>
     <span class="p p-Indicator">-</span> <span class="nt">json.result.size</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>               <span class="c1"># test size of the dict</span>
     <span class="p p-Indicator">-</span> <span class="nt">json.result.value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">. &gt; 3</span>
     <span class="p p-Indicator">-</span> <span class="nt">json.result.value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">. &lt;= 4</span>
-    <span class="p p-Indicator">-</span> <span class="nt">content</span><span class="p">:</span>  <span class="s">&quot;result&quot;</span>                <span class="c1"># ensure that the global response contains text &quot;result&quot;</span>
+    <span class="p p-Indicator">-</span> <span class="nt">json.result.list.0</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">42</span>            <span class="c1"># refer to the first item in the list</span>
+    <span class="p p-Indicator">-</span> <span class="nt">json.result.list.1</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">43</span>            <span class="c1"># refer to the second item in the list</span>
+    <span class="p p-Indicator">-</span> <span class="nt">json.result.list.-1</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">43</span>           <span class="c1"># refer to the last item in the list</span>
 </pre></div>
 
 
 <h3 id="doc">"doc"</h3>
 <div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">GET</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/test</span> 
-  <span class="nt">doc</span><span class="p">:</span> <span class="s">&quot;Just</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">description</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">displayed</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">html</span><span class="nv"> </span><span class="s">output</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">request&quot;</span>
+  <span class="nt">doc</span><span class="p">:</span> <span class="s">&quot;Just</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">description</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">displayed</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">html</span><span class="nv"> </span><span class="s">output</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">&lt;&lt;root&gt;&gt;</span><span class="nv"> </span><span class="s">!&quot;</span>
 </pre></div>
 
 
+<p>Yes, you can use var substitutions in <code>doc</code> !</p>
 <h3 id="params">"params"</h3>
 <div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">GET</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/&lt;&lt;path&gt;&gt;</span>
   <span class="nt">params</span><span class="p">:</span>
@@ -729,8 +757,9 @@
 </pre></div>
 
 
+<p><code>&lt;&lt;path&gt;&gt;</code> is substitued by the value of the param <code>path</code>.</p>
 <h3 id="save">"save"</h3>
-<p>It lets you save parameters for later use. Theses parameters are only available in the current yaml tests. Only thoses saved in the <code>BEGIN</code> procedure will be global to all yaml tests.</p>
+<p>It lets you save parameters for later use. Theses parameters are only available in the current yaml tests. Only thoses saved in the <code>BEGIN</code> procedure will be shared with all test files.</p>
 <h4 id="save-all-the-response">Save all the response</h4>
 <div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">GET</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/returnJson</span>  <span class="c1"># return {&quot;result&quot;:{&quot;content&quot;:&quot;ok&quot;,&quot;value&quot;:3.3}}</span>
   <span class="nt">save</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">allJson</span>

@@ -44,6 +44,12 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
       
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#4caf50">
       
     
     
@@ -65,7 +71,9 @@
     
   </head>
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="green" data-md-color-accent="green">
   
     <svg class="md-svg">
       <defs>
@@ -459,7 +467,7 @@
                 <h1 id="the-command-line">The command line</h1>
 <p>You can pass an many yaml's test files or folders as you want. Reqman will compute a list of tests, and order them according names. So it's a good practice, to prefix file names with numbers. Reqman will ignore files/folders starting with a "." or "_".</p>
 <p>And it will run the tests against the first reqman.conf found in the common path, if it exists.</p>
-<p>If <a href="../conf/">reqman.conf</a> contains 'switchs', you'll be able to add switchs in your command line.</p>
+<p>If <a href="../conf/">reqman.conf</a> contains <a href="../conf/#switchs">switchs</a>, you'll be able to add switchs in your command line.</p>
 <div class="codehilite"><pre><span></span>USAGE TEST   : reqman [--option] [-switch] &lt;folder|file&gt;...
 USAGE CREATE : reqman new &lt;url&gt;
 Version 2.1.0.2
@@ -484,19 +492,30 @@ Test a http service with pre-made scenarios, whose are simple yaml files
 
 <h2 id="reqmans-options">Reqman's options</h2>
 <h3 id="p-paralleliz">p: paralleliz</h3>
-<p>Will run a "thread" by file. It's a lot speeder ;-)</p>
+<p>Will run a "thread" by test's file. It's a lot speeder ;-)</p>
 <h3 id="b-browser">b: browser</h3>
-<p>Will open <code>reqman.html</code> in the default browser</p>
-<p>...</p>
+<p>Will open <code>reqman.html</code> file in the default browser, after tests.</p>
+<p>... will continue to explain new reqman2 features ...
+... will continue to explain new reqman2 features ...
+... will continue to explain new reqman2 features ...
+... will continue to explain new reqman2 features ...
+... will continue to explain new reqman2 features ...
+... will continue to explain new reqman2 features ...</p>
 <h2 id="start-a-new-project">Start a new project</h2>
 <p>There is a special command to start a new project from scratch :</p>
-<p>'''
-$ reqman new https://www.example.com/myapi/v1/test
-'''</p>
+<div class="codehilite"><pre><span></span>$ reqman new https://www.example.com/myapi/v1/test
+</pre></div>
+
+
 <p>It will create, in the current folder, a (very) basic <a href="../conf/">reqman.conf</a> and a test file against this url</p>
+<p>And you can run test immediatly :</p>
+<div class="codehilite"><pre><span></span>$ reqman .
+</pre></div>
+
+
 <h2 id="shebang-mode">Shebang mode</h2>
 <p>It's my most loved feature, over reqman1 ;-)</p>
-<p>Very useful in a text editor : just configure your editor to run the edited yaml file against reqman executable. And if you run a single file, without any parameters. Reqman will look a the shebang, and use the parameter.</p>
+<p>Very useful in a text editor : just configure your editor to run the edited yaml file against reqman executable. And if you run a single file, without any parameters. Reqman will look at the shebang, and use the parameters.</p>
 <div class="codehilite"><pre><span></span><span class="c1">#!/usr/local/bin/reqman --b -prod</span>
 <span class="p p-Indicator">-</span> <span class="nt">GET</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/&lt;&lt;path&gt;&gt;</span>
   <span class="nt">params</span><span class="p">:</span>
@@ -512,7 +531,8 @@ $ reqman new https://www.example.com/myapi/v1/test
 </pre></div>
 
 
-<p>will run the file, with <code>prod</code> switch, and open the html output in the default browser ...</p>
+<p>Will run the file, with <code>prod</code> switch, and open the html output in the default browser ...
+(if the file is runned with others files or with options/switch ... reqman will use options/switchs from commandline)</p>
 <p>Very handy, to avoid to go in console while coding your test ;-)</p>
                 
                   

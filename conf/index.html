@@ -44,6 +44,12 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
       
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#4caf50">
       
     
     
@@ -65,7 +71,9 @@
     
   </head>
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="green" data-md-color-accent="green">
   
     <svg class="md-svg">
       <defs>
@@ -563,8 +571,12 @@
 
 <p>tip: this var can be overriden in a "params"/"foreach" statement.</p>
 <h3 id="headers">"headers"</h3>
-<p>Global <code>headers</code> for all tests
-SEE HEADERS</p>
+<p>Global <a href="../yml_syntax/#headers">headers</a> for all tests</p>
+<div class="codehilite"><pre><span></span><span class="nt">headers</span><span class="p">:</span>
+    <span class="nt">content-type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">application/json</span>
+</pre></div>
+
+
 <h2 id="declare-switchs-for-command-line">Declare switchs for command line</h2>
 <h3 id="switchs">"switchs"</h3>
 <p>Switchs are a reqman's feature, to let you override default param with command line switchs.</p>
