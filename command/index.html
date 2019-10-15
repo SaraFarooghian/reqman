@@ -38,7 +38,7 @@
     
     
       
-        <title>Simplest use - Reqman</title>
+        <title>Command Line - Reqman</title>
       
     
     
@@ -79,7 +79,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#simplest-use" tabindex="1" class="md-skip">
+      <a href="#the-command-line" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -105,7 +105,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Simplest use
+                Command Line
               
             </span>
           
@@ -238,20 +238,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="Simplest use" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../simple_use/" title="Simplest use" class="md-nav__link">
       Simplest use
     </a>
-    
   </li>
 
     
@@ -295,11 +286,83 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../command/" title="Command Line" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Command Line
+      </label>
+    
+    <a href="./" title="Command Line" class="md-nav__link md-nav__link--active">
       Command Line
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reqmans-options" class="md-nav__link">
+    Reqman's options
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#p-paralleliz" class="md-nav__link">
+    p: paralleliz
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-browser" class="md-nav__link">
+    b: browser
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-a-new-project" class="md-nav__link">
+    Start a new project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shebang-mode" class="md-nav__link">
+    Shebang mode
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -332,6 +395,56 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reqmans-options" class="md-nav__link">
+    Reqman's options
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#p-paralleliz" class="md-nav__link">
+    p: paralleliz
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-browser" class="md-nav__link">
+    b: browser
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-a-new-project" class="md-nav__link">
+    Start a new project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shebang-mode" class="md-nav__link">
+    Shebang mode
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -343,30 +456,64 @@
               
                 
                 
-                <h1 id="simplest-use">Simplest use</h1>
-<p>Create a yml file (ex: <code>test.yml</code>)</p>
-<div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">GET</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://github.com/manatlan/reqman</span>
-  <span class="nt">tests</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">status</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">200</span>
+                <h1 id="the-command-line">The command line</h1>
+<p>You can pass an many yaml's test files or folders as you want. Reqman will compute a list of tests, and order them according names. So it's a good practice, to prefix file names with numbers. Reqman will ignore files/folders starting with a "." or "_".</p>
+<p>And it will run the tests against the first reqman.conf found in the common path, if it exists.</p>
+<p>If <a href="../conf/">reqman.conf</a> contains 'switchs', you'll be able to add switchs in your command line.</p>
+<div class="codehilite"><pre><span></span>USAGE TEST   : reqman [--option] [-switch] &lt;folder|file&gt;...
+USAGE CREATE : reqman new &lt;url&gt;
+Version 2.1.0.2
+Test a http service with pre-made scenarios, whose are simple yaml files
+(More info on https://github.com/manatlan/reqman)
+
+&lt;folder|file&gt; : yml scenario or folder of yml scenario
+                (as many as you want)
+
+[option]
+        --k        : Limit standard output to failed tests (ko only)
+        --p        : Paralleliz file tests (display only ko tests)
+        --o:name   : Set a name for the html output file 
+        --o        : No html output file, but full console 
+        --b        : Open html output in browser if generated
+        --s        : Save RMR file
+        --r        : Replay the given RMR file in dual mode
+
+[switch]     : pre-made &#39;switch&#39; defined in a reqman.conf
 </pre></div>
 
 
-<p>And run it with reqman, in console</p>
-<div class="codehilite"><pre><span></span>$ reqman test.yml
+<h2 id="reqmans-options">Reqman's options</h2>
+<h3 id="p-paralleliz">p: paralleliz</h3>
+<p>Will run a "thread" by file. It's a lot speeder ;-)</p>
+<h3 id="b-browser">b: browser</h3>
+<p>Will open <code>reqman.html</code> in the default browser</p>
+<p>...</p>
+<h2 id="start-a-new-project">Start a new project</h2>
+<p>There is a special command to start a new project from scratch :</p>
+<p>'''
+$ reqman new https://www.example.com/myapi/v1/test
+'''</p>
+<p>It will create, in the current folder, a (very) basic <a href="../conf/">reqman.conf</a> and a test file against this url</p>
+<h2 id="shebang-mode">Shebang mode</h2>
+<p>It's my most loved feature, over reqman1 ;-)</p>
+<p>Very useful in a text editor : just configure your editor to run the edited yaml file against reqman executable. And if you run a single file, without any parameters. Reqman will look a the shebang, and use the parameter.</p>
+<div class="codehilite"><pre><span></span><span class="c1">#!/usr/local/bin/reqman --b -prod</span>
+<span class="p p-Indicator">-</span> <span class="nt">GET</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/&lt;&lt;path&gt;&gt;</span>
+  <span class="nt">params</span><span class="p">:</span>
+    <span class="nt">path</span><span class="p">:</span> <span class="s">&quot;hello&quot;</span>
 </pre></div>
 
 
-<p>The console should prints:</p>
-<div class="codehilite"><pre><span></span>$ reqman test.yml 
-TEST: test.yml
-* GET https://github.com/manatlan/reqman --&gt; 200
-  - OK : status = 200
-
-RESULT: 1/1 (1req(s))
+<p>or</p>
+<div class="codehilite"><pre><span></span><span class="c1">#! --b -prod</span>
+<span class="p p-Indicator">-</span> <span class="nt">GET</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/&lt;&lt;path&gt;&gt;</span>
+  <span class="nt">params</span><span class="p">:</span>
+    <span class="nt">path</span><span class="p">:</span> <span class="s">&quot;hello&quot;</span>
 </pre></div>
 
 
-<p>Reqman has called the url and tested that HTTP status == 200, it has generated a <code>reqman.html</code> which contains more details about the http exchange, and it returned a RC code == 0 (no test errors)</p>
+<p>will run the file, with <code>prod</code> switch, and open the html output in the default browser ...</p>
+<p>Very handy, to avoid to go in console while coding your test ;-)</p>
                 
                   
                 
@@ -387,7 +534,7 @@ RESULT: 1/1 (1req(s))
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../install/" title="Installation" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../python/" title="Python powered" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -396,19 +543,19 @@ RESULT: 1/1 (1req(s))
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Installation
+                Python powered
               </span>
             </div>
           </a>
         
         
-          <a href="../yml_syntax/" title="Test's Grammar" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../example/" title="An example" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Test's Grammar
+                An example
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

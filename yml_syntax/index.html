@@ -38,7 +38,7 @@
     
     
       
-        <title>Grammar - Reqman</title>
+        <title>Test's Grammar - Reqman</title>
       
     
     
@@ -79,7 +79,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#reserved-words" tabindex="1" class="md-skip">
+      <a href="#reqman-language-syntax" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -105,7 +105,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Grammar
+                Test's Grammar
               
             </span>
           
@@ -250,18 +250,6 @@
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../conf/" title="Using a global conf" class="md-nav__link">
-      Using a global conf
-    </a>
-  </li>
-
-    
-      
-      
-      
-
   
 
 
@@ -271,11 +259,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Grammar
+        Test's Grammar
       </label>
     
-    <a href="./" title="Grammar" class="md-nav__link md-nav__link--active">
-      Grammar
+    <a href="./" title="Test's Grammar" class="md-nav__link md-nav__link--active">
+      Test's Grammar
     </a>
     
       
@@ -287,19 +275,53 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#reserved-words" class="md-nav__link">
-    Reserved words
+  <a href="#reqman-language-syntax" class="md-nav__link">
+    Reqman language Syntax
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#http-verb" class="md-nav__link">
-    HTTP VERB
+  <a href="#a-http-request" class="md-nav__link">
+    A HTTP Request
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#a-procedures-declaration" class="md-nav__link">
+    A Procedure's declaration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-call-procedure" class="md-nav__link">
+    A call procedure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-break-statement" class="md-nav__link">
+    A 'break' statement
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additionnal-keywords" class="md-nav__link">
+    Additionnal keywords
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#body" class="md-nav__link">
@@ -366,88 +388,6 @@
           <li class="md-nav__item">
   <a href="#foreach" class="md-nav__link">
     "foreach"
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#call" class="md-nav__link">
-    "call"
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reserved-params" class="md-nav__link">
-    Reserved params:
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#root" class="md-nav__link">
-    "root"
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#timeout" class="md-nav__link">
-    "timeout"
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#in-reqmanconf-only" class="md-nav__link">
-    In reqman.conf only:
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#headers_1" class="md-nav__link">
-    "headers"
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tests_1" class="md-nav__link">
-    "tests"
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#switchs" class="md-nav__link">
-    "switchs"
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#begin-procedure" class="md-nav__link">
-    "BEGIN" (procedure)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#end-procedure" class="md-nav__link">
-    "END" (procedure)
   </a>
   
 </li>
@@ -474,8 +414,44 @@
 
 
   <li class="md-nav__item">
+    <a href="../conf/" title="Using a global conf" class="md-nav__link">
+      Using a global conf
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
     <a href="../python/" title="Python powered" class="md-nav__link">
       Python powered
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../command/" title="Command Line" class="md-nav__link">
+      Command Line
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../example/" title="An example" class="md-nav__link">
+      An example
     </a>
   </li>
 
@@ -499,19 +475,53 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#reserved-words" class="md-nav__link">
-    Reserved words
+  <a href="#reqman-language-syntax" class="md-nav__link">
+    Reqman language Syntax
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#http-verb" class="md-nav__link">
-    HTTP VERB
+  <a href="#a-http-request" class="md-nav__link">
+    A HTTP Request
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#a-procedures-declaration" class="md-nav__link">
+    A Procedure's declaration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-call-procedure" class="md-nav__link">
+    A call procedure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-break-statement" class="md-nav__link">
+    A 'break' statement
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additionnal-keywords" class="md-nav__link">
+    Additionnal keywords
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#body" class="md-nav__link">
@@ -578,88 +588,6 @@
           <li class="md-nav__item">
   <a href="#foreach" class="md-nav__link">
     "foreach"
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#call" class="md-nav__link">
-    "call"
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reserved-params" class="md-nav__link">
-    Reserved params:
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#root" class="md-nav__link">
-    "root"
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#timeout" class="md-nav__link">
-    "timeout"
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#in-reqmanconf-only" class="md-nav__link">
-    In reqman.conf only:
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#headers_1" class="md-nav__link">
-    "headers"
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tests_1" class="md-nav__link">
-    "tests"
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#switchs" class="md-nav__link">
-    "switchs"
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#begin-procedure" class="md-nav__link">
-    "BEGIN" (procedure)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#end-procedure" class="md-nav__link">
-    "END" (procedure)
   </a>
   
 </li>
@@ -686,24 +614,84 @@
               
                 
                 
-                  <h1>Grammar</h1>
+                  <h1>Test's Grammar</h1>
                 
-                <h2 id="reserved-words">Reserved words</h2>
-<h3 id="http-verb">HTTP VERB</h3>
-<p>Known HTTP verbs : "GET", "POST", "DELETE", "PUT", "HEAD", "OPTIONS", "TRACE", "PATCH", "CONNECT"</p>
-<div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">OPTIONS</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/hello</span>
+                <h2 id="reqman-language-syntax">Reqman language Syntax</h2>
+<p>A reqman's file tests, is a YAML file, endings with ".yml" or ".rml" (ReqMan Language).</p>
+<p>Its content is a list of statements. There are 4 types of statements :</p>
+<ul>
+<li>A http request</li>
+<li>A Procedure's declaration</li>
+<li>A call procedure</li>
+<li>A break statement</li>
+</ul>
+<h3 id="a-http-request">A HTTP Request</h3>
+<p>This kind of statement, should contain ONE HTTP VERB, in uppercase (Known HTTP verbs : "GET", "POST", "DELETE", "PUT", "HEAD", "OPTIONS", "TRACE", "PATCH", "CONNECT")</p>
+<div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">GET</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/hello</span>
+<span class="p p-Indicator">-</span> <span class="nt">OPTIONS</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/hello</span>
 <span class="p p-Indicator">-</span> <span class="nt">HEAD</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/hello</span>
-<span class="p p-Indicator">-</span> <span class="nt">GET</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/hello</span>
 </pre></div>
 
 
+<p>And it's generally completed with additionnal keywords</p>
+<h3 id="a-procedures-declaration">A Procedure's declaration</h3>
+<p>This statement declare a procedure which can be only called by a "call statement".</p>
+<p>Here is the declaration of a procedure <code>MyProcedure</code>:</p>
+<div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">MyProcedure</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">GET</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/hello1</span>
+    <span class="p p-Indicator">-</span> <span class="nt">GET</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/hello2</span>
+</pre></div>
+
+
+<p>The content of the procedure is a list which can contains the 4 types of statements.</p>
+<p>Note : Without a call statement : this file does nothing ...</p>
+<h3 id="a-call-procedure">A call procedure</h3>
+<p>This statement let you call a procedure.</p>
+<div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">call</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">MyProcedure</span>
+</pre></div>
+
+
+<p>or</p>
+<div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">call</span><span class="p">:</span> 
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">MyProcedure1</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">MyProcedure2</span>
+</pre></div>
+
+
+<p>And it's generally completed with additionnal keywords</p>
+<h3 id="a-break-statement">A 'break' statement</h3>
+<p>This statement is only useful, when you are working on a test file, it lets you break the process. So you can edit your statements step by step.</p>
+<div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">GET</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/hello1</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">break</span>
+<span class="p p-Indicator">-</span> <span class="nt">GET</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/hello2</span>
+<span class="p p-Indicator">-</span> <span class="nt">GET</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/hello3</span>
+</pre></div>
+
+
+<p>In this case ^^; only the first request is called ... The others are simply ignored.</p>
+<h2 id="additionnal-keywords">Additionnal keywords</h2>
+<p>Theses keywords can be added on request or call statements, to complete the statement.</p>
 <h3 id="body">"body"</h3>
+<p>Let you add a 'body' in your POST statements ;-)</p>
 <div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">POST</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/hello</span>
   <span class="nt">body</span><span class="p">:</span> <span class="s">&quot;I&#39;m</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">body&quot;</span>
 </pre></div>
 
 
+<div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">POST</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/hello</span>
+  <span class="nt">body</span><span class="p">:</span> <span class="p p-Indicator">{</span><span class="s">&quot;key&quot;</span><span class="p p-Indicator">:</span><span class="nv">12</span><span class="p p-Indicator">,</span> <span class="s">&quot;value&quot;</span><span class="p p-Indicator">:</span><span class="s">&quot;hello&quot;</span><span class="p p-Indicator">}</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">POST</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/hello</span>
+  <span class="nt">body</span><span class="p">:</span>
+    <span class="nt">key</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">12</span>
+    <span class="nt">value</span><span class="p">:</span> <span class="s">&quot;hello&quot;</span>
+</pre></div>
+
+
 <h3 id="headers">"headers"</h3>
+<p>Let you add 'headers' in yours statements. </p>
 <div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">POST</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/hello</span>
   <span class="nt">body</span><span class="p">:</span> <span class="s">&quot;I&#39;m</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">body&quot;</span>
   <span class="nt">headers</span><span class="p">:</span>
@@ -713,6 +701,7 @@
 
 
 <h3 id="tests">"tests"</h3>
+<p>Let you add 'tests' in yours statements. </p>
 <div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">GET</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/returnJson</span>  <span class="c1"># return {&quot;result&quot;:{&quot;content&quot;:&quot;ok&quot;,&quot;value&quot;:3.3}}</span>
   <span class="nt">tests</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">status</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">200</span>
@@ -741,13 +730,14 @@
 
 
 <h3 id="save">"save"</h3>
+<p>It lets you save parameters for later use. Theses parameters are only available in the current yaml tests. Only thoses saved in the <code>BEGIN</code> procedure will be global to all yaml tests.</p>
 <h4 id="save-all-the-response">Save all the response</h4>
 <div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">GET</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/returnJson</span>  <span class="c1"># return {&quot;result&quot;:{&quot;content&quot;:&quot;ok&quot;,&quot;value&quot;:3.3}}</span>
   <span class="nt">save</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">allJson</span>
 </pre></div>
 
 
-<p>Now, you can 'allJson' in following requests</p>
+<p>Now, you can use 'allJson' in following statements</p>
 <h4 id="save-a-partial-response-in-a-new-param-rcontent">Save a partial response in a new param 'rcontent'</h4>
 <div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">GET</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/returnJson</span>  <span class="c1"># return {&quot;result&quot;:{&quot;content&quot;:&quot;ok&quot;,&quot;value&quot;:3.3}}</span>
   <span class="nt">save</span><span class="p">:</span> 
@@ -755,8 +745,9 @@
 </pre></div>
 
 
-<p>now, you can 'rcontent' in following requests</p>
+<p>Now, you can use 'rcontent' in following statements</p>
 <h3 id="foreach">"foreach"</h3>
+<p>It let you repeat your statement, with a list of dict.</p>
 <div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">GET</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/test/&lt;&lt;value&gt;&gt;</span>
   <span class="nt">foreach</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
@@ -765,53 +756,11 @@
 </pre></div>
 
 
-<p>Will make 3 requests</p>
-<h3 id="call">"call"</h3>
-<div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">MyProcedure</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">POST</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/test</span>
-      <span class="nt">body</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;&lt;value&gt;&gt;</span>
-
-    <span class="p p-Indicator">-</span> <span class="nt">GET</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/test</span>
-      <span class="nt">tests</span><span class="p">:</span>
-        <span class="p p-Indicator">-</span> <span class="nt">content</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;&lt;value&gt;&gt;</span>
-
-<span class="p p-Indicator">-</span> <span class="nt">call</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">MyProcedure</span>
-  <span class="nt">params</span><span class="p">:</span>
-    <span class="nt">value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+<p>Will make 3 requests, it the same things as :</p>
+<div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">GET</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/test/1</span>
+<span class="p p-Indicator">-</span> <span class="nt">GET</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/test/2</span>
+<span class="p p-Indicator">-</span> <span class="nt">GET</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/test/3</span>
 </pre></div>
-
-
-<h2 id="reserved-params">Reserved params:</h2>
-<h3 id="root">"root"</h3>
-<p>It's the root path, which is used as prefix when request use absolute path</p>
-<div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">GET</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/test</span>
-  <span class="nt">params</span><span class="p">:</span>
-    <span class="nt">root</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://example.com</span>
-</pre></div>
-
-
-<p>it's better to define it in the reqman.conf</p>
-<h3 id="timeout">"timeout"</h3>
-<p>It's the max time in ms to wait the response</p>
-<div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">call</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">MyProcedure</span>
-  <span class="nt">params</span><span class="p">:</span>
-    <span class="nt">timeout</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span>  <span class="c1">#100ms max</span>
-</pre></div>
-
-
-<p>it's better to define it in the reqman.conf</p>
-<h2 id="in-reqmanconf-only">In reqman.conf only:</h2>
-<h3 id="headers_1">"headers"</h3>
-<p>Global <code>headers</code> for all tests</p>
-<h3 id="tests_1">"tests"</h3>
-<p>Global <code>tests</code> for all tests (DEPRECATED (useless?))</p>
-<h3 id="switchs">"switchs"</h3>
-<h3 id="begin-procedure">"BEGIN" (procedure)</h3>
-<p>It's a special procedure, which can be declared in reqman.conf only, and is called at the beginning of all tests.
-It can be useful to obtain an oauth2 token bearer, initiate some things, ...</p>
-<h3 id="end-procedure">"END" (procedure)</h3>
-<p>It's a special procedure, which can be declared in reqman.conf only, and is called at the end of all tests.
-It can be useful to clear some things after all tests, ...</p>
                 
                   
                 
@@ -832,7 +781,7 @@ It can be useful to clear some things after all tests, ...</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../conf/" title="Using a global conf" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../simple_use/" title="Simplest use" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -841,19 +790,19 @@ It can be useful to clear some things after all tests, ...</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Using a global conf
+                Simplest use
               </span>
             </div>
           </a>
         
         
-          <a href="../python/" title="Python powered" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../conf/" title="Using a global conf" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Python powered
+                Using a global conf
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

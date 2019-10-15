@@ -250,6 +250,18 @@
       
       
 
+
+  <li class="md-nav__item">
+    <a href="../yml_syntax/" title="Test's Grammar" class="md-nav__link">
+      Test's Grammar
+    </a>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
@@ -260,22 +272,113 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Using a global conf
+      </label>
+    
     <a href="./" title="Using a global conf" class="md-nav__link md-nav__link--active">
       Using a global conf
     </a>
     
-  </li>
-
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
     
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#define-some-globals-parameters" class="md-nav__link">
+    Define some globals parameters
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#root" class="md-nav__link">
+    "root"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timeout" class="md-nav__link">
+    "timeout"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#headers" class="md-nav__link">
+    "headers"
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#declare-switchs-for-command-line" class="md-nav__link">
+    Declare switchs for command line
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#switchs" class="md-nav__link">
+    "switchs"
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#declare-procedures" class="md-nav__link">
+    Declare procedures
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#begin-procedure" class="md-nav__link">
+    "BEGIN" procedure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#end-procedure" class="md-nav__link">
+    "END" procedure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
       
       
-
-
-  <li class="md-nav__item">
-    <a href="../yml_syntax/" title="Grammar" class="md-nav__link">
-      Grammar
-    </a>
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -287,6 +390,30 @@
   <li class="md-nav__item">
     <a href="../python/" title="Python powered" class="md-nav__link">
       Python powered
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../command/" title="Command Line" class="md-nav__link">
+      Command Line
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../example/" title="An example" class="md-nav__link">
+      An example
     </a>
   </li>
 
@@ -308,6 +435,96 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#define-some-globals-parameters" class="md-nav__link">
+    Define some globals parameters
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#root" class="md-nav__link">
+    "root"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timeout" class="md-nav__link">
+    "timeout"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#headers" class="md-nav__link">
+    "headers"
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#declare-switchs-for-command-line" class="md-nav__link">
+    Declare switchs for command line
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#switchs" class="md-nav__link">
+    "switchs"
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#declare-procedures" class="md-nav__link">
+    Declare procedures
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#begin-procedure" class="md-nav__link">
+    "BEGIN" procedure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#end-procedure" class="md-nav__link">
+    "END" procedure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -320,9 +537,78 @@
                 
                 
                 <h1 id="using-a-reqmanconf">Using a reqman.conf</h1>
-<p>It can be very useful to capitalize/share common things in a single place : the <code>reqman.conf</code>
-It's a yaml file (a dict)</p>
-<p>etc .. etc ...</p>
+<p>It can be very useful to share common things in a single place : the <code>reqman.conf</code> is here for that !</p>
+<p>Basically, it's a yaml file, which is a dictionnary of key:value.</p>
+<p>It is useful :</p>
+<ul>
+<li>to define some globals parameters (root, timeout, headers, ...)</li>
+<li>to declare some switchs for command line.</li>
+<li>to share some global procedures between yaml's files.</li>
+<li>to share some global <a href="../python/">python params/methods</a> between yaml's files.</li>
+</ul>
+<h2 id="define-some-globals-parameters">Define some globals parameters</h2>
+<p>Here are some special parameters, but you can create as many global parameters as you want ;-)</p>
+<h3 id="root">"root"</h3>
+<p>It's the root path, which is used as prefix when a request use an absolute path</p>
+<div class="codehilite"><pre><span></span><span class="nt">root</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://example.com</span>
+</pre></div>
+
+
+<p>tip: this var can be overriden in a "params"/"foreach" statement.</p>
+<h3 id="timeout">"timeout"</h3>
+<p>It's the max time in ms to wait the response</p>
+<div class="codehilite"><pre><span></span><span class="nt">timeout</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span>  <span class="c1">#100ms max</span>
+</pre></div>
+
+
+<p>tip: this var can be overriden in a "params"/"foreach" statement.</p>
+<h3 id="headers">"headers"</h3>
+<p>Global <code>headers</code> for all tests
+SEE HEADERS</p>
+<h2 id="declare-switchs-for-command-line">Declare switchs for command line</h2>
+<h3 id="switchs">"switchs"</h3>
+<p>Switchs are a reqman's feature, to let you override default param with command line switchs.</p>
+<p>Here is a simple reqman.conf:</p>
+<div class="codehilite"><pre><span></span><span class="nt">root</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://example.com</span>
+
+<span class="nt">switchs</span><span class="p">:</span>
+    <span class="nt">goog</span><span class="p">:</span> 
+        <span class="nt">root</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://google.com</span>
+</pre></div>
+
+
+<p>if you run :</p>
+<div class="codehilite"><pre><span></span>$ reqman test.yml
+</pre></div>
+
+
+<p>it will use <code>https://example.com</code> as root var.</p>
+<p>if you run :</p>
+<div class="codehilite"><pre><span></span>$ reqman test.yml -goog
+</pre></div>
+
+
+<p>it will use <code>https://google.com</code> as root var.</p>
+<p>You can combine as many switchs as you want ...</p>
+<p>BTW, you can add a 'doc' statement, which will appear in <a href="../command/">command line usage</a>, like this:</p>
+<div class="codehilite"><pre><span></span><span class="nt">root</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://example.com</span>
+
+<span class="nt">switchs</span><span class="p">:</span>
+    <span class="nt">goog</span><span class="p">:</span> 
+        <span class="nt">doc</span><span class="p">:</span> <span class="s">&quot;to</span><span class="nv"> </span><span class="s">test</span><span class="nv"> </span><span class="s">google</span><span class="nv"> </span><span class="s">;-)&quot;</span>
+        <span class="nt">root</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://google.com</span>
+</pre></div>
+
+
+<h2 id="declare-procedures">Declare procedures</h2>
+<p>As you can declare a procedure in a yaml's test file, you can declare it in the reqman.conf. So every test's files can use it.</p>
+<p>But there are two special procedures: BEGIN &amp; END</p>
+<h3 id="begin-procedure">"BEGIN" procedure</h3>
+<p>It's a special procedure, which can be declared in reqman.conf only, and is called at the beginning of all tests.
+It can be useful to obtain an oauth2 token bearer, initiate some things, ...</p>
+<h3 id="end-procedure">"END" procedure</h3>
+<p>It's a special procedure, which can be declared in reqman.conf only, and is called at the end of all tests.
+It can be useful to clear some things after all tests, ...</p>
                 
                   
                 
@@ -343,7 +629,7 @@ It's a yaml file (a dict)</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../simple_use/" title="Simplest use" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../yml_syntax/" title="Test's Grammar" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -352,19 +638,19 @@ It's a yaml file (a dict)</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Simplest use
+                Test's Grammar
               </span>
             </div>
           </a>
         
         
-          <a href="../yml_syntax/" title="Grammar" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../python/" title="Python powered" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Grammar
+                Python powered
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
