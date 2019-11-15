@@ -441,7 +441,7 @@
     <span class="nt">content</span><span class="p">:</span> <span class="s">&quot;hello</span><span class="nv"> </span><span class="s">world&quot;</span>
     <span class="nt">gzip</span><span class="p">:</span> <span class="p p-Indicator">|</span>
         <span class="no">import zlib</span>
-        <span class="no">return zlib.compress( x )</span>
+        <span class="no">return zlib.compress( bytes(x,&quot;utf8&quot;) )</span>
 </pre></div>
 
 
@@ -452,10 +452,10 @@
     <span class="nt">content</span><span class="p">:</span> <span class="s">&quot;hello</span><span class="nv"> </span><span class="s">world&quot;</span>
     <span class="nt">gzip</span><span class="p">:</span> <span class="p p-Indicator">|</span>
         <span class="no">import zlib</span>
-        <span class="no">return zlib.compress( x )</span>
-    <span class="nt">b65</span><span class="p">:</span> <span class="p p-Indicator">|</span>
+        <span class="no">return zlib.compress( bytes(x,&quot;utf8&quot;) )</span>
+    <span class="nt">b64</span><span class="p">:</span> <span class="p p-Indicator">|</span>
         <span class="no">import base64</span>
-        <span class="no">return base64.b64encode( x )</span>
+        <span class="no">return str( base64.b64encode( bytes(x,&quot;utf8&quot;) ), &quot;utf8&quot; )</span>
 </pre></div>
 
 
